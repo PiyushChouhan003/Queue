@@ -1,0 +1,15 @@
+Question -->>  https://practice.geeksforgeeks.org/problems/queue-reversal/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
+
+class GfG{
+    //Function to reverse the queue.
+    public Queue<Integer> rev(Queue<Integer> q){
+        //add code here.
+        Stack<Integer> st = new Stack<>();
+        while(q.size() > 0)
+        st.push(q.remove());
+        
+        while(st.size() > 0)
+        q.add(st.pop());
+        return q;
+    }
+}
